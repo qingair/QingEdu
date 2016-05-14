@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img class="logo" src="./assets/logo.png">
-    <router-view></router-view>
+
 
     <p>
       Welcome to QingEdu
@@ -15,8 +15,14 @@
       <li>
         <a v-link="{ path: '/hello' }">Go to hello</a>
       </li>
+      <li>
+        <a v-link="{ path: '/lessons' }">Go to Lessons</a>
+      </li>
     </ul>
 
+
+
+    <router-view></router-view>
 
 
 
@@ -24,13 +30,6 @@
 </template>
 
 <script>
-import Hello from './components/Hello'
-
-export default {
-  components: {
-    Hello
-  }
-}
 </script>
 
 <style>
