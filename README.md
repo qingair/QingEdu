@@ -1,27 +1,57 @@
-# qingedu_admin
+# qingedu
 
 > a project for my school
 
-## Build Setup
+## About
 
-``` bash
-# install dependencies
-npm install
+This project uses [Feathers](http://feathersjs.com). An open source web  framework for building modern real-time applications.
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Getting Started
 
-# build for production with minification
-npm run build
+Getting up and running is as easy as 1, 2, 3.
 
-# run unit tests
-npm run unit
+1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
+2. Install your dependencies
+    
+    ```
+    cd path/to/qingedu; npm install
+    ```
 
-# run e2e tests
-npm run e2e
+3. Start your app
+    
+    ```
+    npm start
+    ```
 
-# run all tests
-npm test
+## Testing
+
+Simply run `npm test` and all your tests in the `test/` directory will be run.
+
+## Scaffolding
+
+Feathers has a powerful command line interface. Here are a few things it can do:
+
+```
+$ npm install -g feathers-cli             # Install Feathers CLI
+
+$ feathers generate service               # Generate a new Service
+$ feathers generate hook                  # Generate a new Hook
+$ feathers generate model                 # Generate a new Model
+$ feathers help                           # Show all commands
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Help
+
+For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
+
+## Changelog
+
+__0.1.0__
+
+- Initial release
+
+## License
+
+Copyright (c) 2015
+
+Licensed under the [MIT license](LICENSE).
