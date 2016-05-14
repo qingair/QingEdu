@@ -1,0 +1,13 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "mysql": "mysql://root:zxl223322@localhost:3306/qingedu",
+  "public": "../public/",
+  "auth": {
+    "idField": "id",
+    "token": {
+      "secret": "QzgEYnGtWOt3g0x3uPuOS37JQ5aU/8ELXp4ABJIhENmwgu53xDONqiT4iX5sVEN9B6LcYs4fUNA5mvKFP16ZoA=="
+    },
+    "local": {}
+  }
+}
