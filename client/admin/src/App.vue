@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <v-row>
-      <v-col span="24">
+
         <ul>
           <li>
             <a v-link="{ path: '/' }">Go to home</a>
@@ -13,14 +12,7 @@
             <a v-link="{ path: '/lessons' }">Go to Lessons</a>
           </li>
         </ul>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col span="6">1</v-col>
-      <v-col span="6">1</v-col>
-      <v-col span="6">1</v-col>
-      <v-col span="6">1</v-col>
-    </v-row>
+
 
     <img class="logo" src="./assets/logo.png">
 

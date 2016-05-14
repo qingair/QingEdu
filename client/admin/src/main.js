@@ -30,12 +30,12 @@ router.map({
           template: '<p>Default Lessons</p>'
         }
       },
-      '/add': {
+      '/list1': {
         // Bar will be rendered inside Foo's <router-view>
         // when /foo/bar is matched
         component: lesson1
       },
-      '/detail': {
+      '/list2': {
         // same for Baz, but only when /foo/baz is matched
         component: lesson2
       }
