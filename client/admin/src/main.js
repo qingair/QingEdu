@@ -8,7 +8,7 @@ import lesson1 from './components/Lessons/LessonsList.vue'
 import lesson2 from './components/Lessons/LessonsList2.vue'
 Vue.use(VueRouter)
 Vue.config.debug = true
-let router = new VueRouter()
+const router = new VueRouter()
 router.map({
   '/': {
     component: Home,
