@@ -1,6 +1,6 @@
 <template>
   <div class="lessons">
-    <h1>Lessons</h1>
+
     <ul>
       <li>
         <a v-link="{ path: '/lessons/list1' }">list1</a>

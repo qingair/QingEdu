@@ -1,23 +1,23 @@
 <template>
-  <div class="lessons">
-    list1- aticles
+  <div class="row">
+    <h3 class="cyan-text">Articles</h3>
 
     <table class="striped">
       <thead>
       <tr>
-        <th data-field="id">#</th>
-        <th data-field="name">Name</th>
+        <th>#</th>
+        <th>Name</th>
         <th>CreatAt</th>
-        <th data-field="price">Category</th>
-        <th data-field="price">User</th>
-        <th data-field="price">Actions</th>
+        <th>Category</th>
+        <th>User</th>
+        <th>Actions</th>
       </tr>
       </thead>
 
       <tbody>
-      <tr>
+      <tr v-for="article in articles">
         <td>1</td>
-        <td><a>article1</a></td>
+        <td><a>{{article.text}}</a></td>
         <td>2015-06-21</td>
         <td>
           <div class="chip">
@@ -33,20 +33,12 @@
           <a><i class="small material-icons">insert_chart</i></a>
           <a><i class="small material-icons">edit</i></a>
           <a><i class="small material-icons">edit</i></a>
-
-          <!--<a class=" btn small"><i class="material-icons small">edit</i></a>-->
-          <!--<a class="waves-effect waves-light btn"><i class="material-icons Tiny">edit</i></a>-->
-          <!--<a class="waves-effect waves-light btn"><i class="material-icons ">edit</i></a>-->
         </td>
       </tr>
 
       </tbody>
     </table>
-<ul>
-  <li v-for="article in articles">
-    <a href="#">{{ article.text }}</a>
-  </li>
-</ul>
+
 
   </div>
 </template>
@@ -73,7 +65,4 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  color: #b91f1f;
-}
 </style>
