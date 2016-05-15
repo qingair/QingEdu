@@ -4,4 +4,5 @@
 import Vue from 'vue'
 import Keen from 'keen-ui'
 Vue.use(Keen)
-
+import Material from 'vue-material'
+Material.regAll(Vue)
