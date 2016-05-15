@@ -1,29 +1,29 @@
 'use strict';
 
 const service = require('feathers-sequelize');
-const articles = require('./articles-model');
+const comment = require('./comment-model');
 const hooks = require('./hooks');
 
 module.exports = function(){
   const app = this;
 
   const options = {
-    Model: articles(app.get('sequelize')),
+    Model: comment(app.get('sequelize')),
     paginate: {
-      default: 10,
+      default: 5,
       max: 25
     }
   };
 
   // Initialize our service with any options it requires
-  app.use('/articles', service(options));
+  app.use('/comments', service(options));
 
   // Get our initialize service to that we can bind hooks
-  const articlesService = app.service('/articles');
+  const commentService = app.service('/comments');
 
   // Set up our before hooks
-  articlesService.before(hooks.before);
+  commentService.before(hooks.before);
 
   // Set up our after hooks
-  articlesService.after(hooks.after);
+  commentService.after(hooks.after);
 };

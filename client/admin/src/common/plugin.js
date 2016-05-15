@@ -6,3 +6,5 @@ import Keen from 'keen-ui'
 Vue.use(Keen)
 import Material from 'vue-material'
 Material.regAll(Vue)
+import Moment from 'vue-moment'
+Vue.use(Moment)

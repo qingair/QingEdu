@@ -1,5 +1,10 @@
 'use strict';
-const articles = require('./articles');
+const user = require('./user');
+const lesson = require('./lesson');
+const tag = require('./tag');
+const article = require('./article');
+const category = require('./category');
+const comment = require('./comment');
 const authentication = require('./authentication');
 const user = require('./user');
 const Sequelize = require('sequelize');
@@ -14,5 +19,10 @@ module.exports = function() {
 
   app.configure(authentication);
   app.configure(user);
-  app.configure(articles);
+  app.configure(comment);
+  app.configure(category);
+  app.configure(article);
+  app.configure(tag);
+  app.configure(lesson);
+  app.configure(user);
 };

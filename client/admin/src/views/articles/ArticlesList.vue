@@ -9,8 +9,9 @@
         <tr>
           <th>#</th>
           <th>Name</th>
-          <th>CreatAt</th>
+          <th>CreatedAt</th>
           <th>Category</th>
+          <th>Tags</th>
           <th>User</th>
           <th>Actions</th>
         </tr>
@@ -18,12 +19,20 @@
 
         <tbody>
         <tr v-for="article in articles.data">
-          <td>1</td>
-          <td><a>{{article.text}}</a></td>
-          <td>2015-06-21</td>
+          <td>{{article.id}}</td>
+          <td><a>{{article.title}}</a></td>
+          <td>{{article.createdAt|moment "YYYY-MM-DD hh:mm"}}</td>
           <td>
             <div class="chip">
-              Jane Doe
+              cat1
+            </div>
+          </td>
+          <td>
+            <div class="chip">
+              tag1
+            </div>
+            <div class="chip">
+              tag2
             </div>
           </td>
           <td>
@@ -32,9 +41,9 @@
             </div>
           </td>
           <td>
-            <a><i class="small material-icons">insert_chart</i></a>
+            <a><i class="small material-icons">eye</i></a>
             <a><i class="small material-icons">edit</i></a>
-            <a><i class="small material-icons">edit</i></a>
+            <a><i class="small material-icons">delete</i></a>
           </td>
         </tr>
 
