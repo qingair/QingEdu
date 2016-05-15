@@ -1,64 +1,71 @@
 <template>
   <div class="row">
-    <h3 class="cyan-text">Articles</h3>
+    <div class="col s12">
+      limit:{{articles.limit}}
+      total:{{articles.total}}
+      skip: {{articles.skip}}
+      <table class="table striped">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>CreatAt</th>
+          <th>Category</th>
+          <th>User</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
 
-    <table class="striped">
-      <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>CreatAt</th>
-        <th>Category</th>
-        <th>User</th>
-        <th>Actions</th>
-      </tr>
-      </thead>
+        <tbody>
+        <tr v-for="article in articles.data">
+          <td>1</td>
+          <td><a>{{article.text}}</a></td>
+          <td>2015-06-21</td>
+          <td>
+            <div class="chip">
+              Jane Doe
+            </div>
+          </td>
+          <td>
+            <div class="chip">
+              iallai
+            </div>
+          </td>
+          <td>
+            <a><i class="small material-icons">insert_chart</i></a>
+            <a><i class="small material-icons">edit</i></a>
+            <a><i class="small material-icons">edit</i></a>
+          </td>
+        </tr>
 
-      <tbody>
-      <tr v-for="article in articles">
-        <td>1</td>
-        <td><a>{{article.text}}</a></td>
-        <td>2015-06-21</td>
-        <td>
-          <div class="chip">
-          Jane Doe
-          </div>
-        </td>
-        <td>
-          <div class="chip">
-           iallai
-          </div>
-        </td>
-        <td>
-          <a><i class="small material-icons">insert_chart</i></a>
-          <a><i class="small material-icons">edit</i></a>
-          <a><i class="small material-icons">edit</i></a>
-        </td>
-      </tr>
-
-      </tbody>
-    </table>
-
+        </tbody>
+      </table>
+      <Pagination></Pagination>
+    </div>
 
   </div>
 </template>
 
 <script>
-  import * as services from '../../services'
+  import {articleService} from '../../services'
+  import Pagination from '../../components/Pagination'
   export default {
     route: {
       data () {
-        let params = {}
+        let params = {limit: 1}
         let self = this
-        return services.articleService
+        return articleService
              .find(params)
-           .then(articles => (self.articles = articles.data))
+           .then(articles => (self.articles = articles))
       }
     },
     data () {
       return {
         articles: []
       }
+    },
+    components: {
+      Pagination
     }
   }
 </script>

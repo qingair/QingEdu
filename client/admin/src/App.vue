@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <md-nav class=" cyan">
+    <md-nav>
       <!--<md-nav-logo href="#!/navbar" pos="">Logo</md-nav-logo>-->
       <md-nav-links pos="left">
         <!--<li v-link="{path:'/',activeClass: 'active',exact: true }"><a>Home</a></li>-->
@@ -49,6 +49,9 @@
   }
   .view {
     transition: all .2s ease;
+  }
+  .table{
+    margin-top: 20px;
   }
   .v-link-active {
     color: red;

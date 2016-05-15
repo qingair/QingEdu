@@ -9,7 +9,8 @@ const Sequelize = require('sequelize');
 
 module.exports = function(sequelize) {
   const articles = sequelize.define('articles', {
-    text: {
+    description: Sequelize.TEXT,
+    title: {
       type: Sequelize.STRING,
       allowNull: false
     }
@@ -17,8 +18,8 @@ module.exports = function(sequelize) {
   }, {
     freezeTableName: true
   });
-
   articles.sync();
+  //articles.sync({force: true});
 
   return articles;
 };
