@@ -34,11 +34,8 @@
 </template>
 
 <script>
-  import Vue from 'vue'
-  import Keen from 'keen-ui'
-  Vue.use(Keen)
 </script>
 
 <style>
-
+  @import "../node_modules/keen-ui/dist/keen-ui.css";
 </style>

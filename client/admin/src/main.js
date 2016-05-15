@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import './common/config'
+import './common/plugin'
 import App from './App'
 import VueRouter from 'vue-router'
 import Hello from './components/Hello.vue'
@@ -7,7 +9,6 @@ import Lessons from './components/Lessons/LessonsLayout.vue'
 import lesson1 from './components/Lessons/LessonsList.vue'
 import lesson2 from './components/Lessons/LessonsList2.vue'
 Vue.use(VueRouter)
-Vue.config.debug = true
 const router = new VueRouter()
 router.map({
   '/': {
