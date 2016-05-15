@@ -1,12 +1,12 @@
 /**
  * Created by iallai on 15/5/2016.
  */
-import Lessons from 'components/lessons/Lessons.vue'
-import lesson1 from 'components/lessons/LessonsList.vue'
-import lesson2 from 'components/lessons/LessonsList2.vue'
+import Lessons from '../views/lessons/Lessons.vue'
+import lesson1 from '../views/lessons/LessonsList.vue'
+import lesson2 from '../views/lessons/LessonsList2.vue'
 
-import Articles from 'components/articles/Articles.vue'
-import ArticlesList from 'components/articles/ArticlesList.vue'
+import Articles from '../views/articles/Articles.vue'
+import ArticlesList from '../views/articles/ArticlesList.vue'
 export function configRouter (router) {
   router.map({
     '/lessons': {
@@ -46,7 +46,7 @@ export function configRouter (router) {
           // This component will be rendered into Foo's <router-view>
           // when /foo is matched. Using an inline component definition
           // here for convenience.
-          component: require('components/articles/ArticlesDetail.vue')
+          component: require('../views/articles/ArticlesDetail.vue')
         }
       }
     }
