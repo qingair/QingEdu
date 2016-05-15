@@ -16,9 +16,9 @@
     "babel-runtime": "^6.0.0",
     "feathers": "^2.0.1",
     "feathers-socketio": "^1.4.0",
+    "keen-ui": "^0.8.7",
     "socket.io-client": "^1.4.6",
     "vue": "^1.0.21",
-    "vue-antd": "^0.2.9",
     "vue-router": "^0.7.13",
     "vuex": "^0.6.3"
   },

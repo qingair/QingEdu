@@ -34,6 +34,9 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import Keen from 'keen-ui'
+  Vue.use(Keen)
 </script>
 
 <style>
