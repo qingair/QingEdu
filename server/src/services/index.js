@@ -1,5 +1,4 @@
 'use strict';
-const user = require('./user');
 const lesson = require('./lesson');
 const tag = require('./tag');
 const article = require('./article');
@@ -18,11 +17,17 @@ module.exports = function() {
   app.set('sequelize', sequelize);
 
   app.configure(authentication);
-  app.configure(user);
   app.configure(comment);
   app.configure(category);
   app.configure(article);
   app.configure(tag);
   app.configure(lesson);
   app.configure(user);
+
+  Object.keys(sequelize.models)
+    .map(name => sequelize.models[name])
+    .filter(model => model.associate !== undefined)
+    .forEach(model => model.associate());
+
+  sequelize.sync();
 };

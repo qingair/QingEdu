@@ -24,10 +24,10 @@ module.exports = function(sequelize) {
     }
   }, {
     freezeTableName: true
+
   });
 
-  article.sync();
-  //article.sync({force:true});
+  article.sync()
 
   return article;
 };
