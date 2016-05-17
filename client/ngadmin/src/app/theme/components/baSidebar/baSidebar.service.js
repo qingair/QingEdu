@@ -23,6 +23,7 @@
           var states = defineMenuItemStates();
           var menuItems = states.filter(function(item) {
             return item.level == 0;
+
           });
 
           menuItems.forEach(function(item) {

@@ -9,6 +9,7 @@
     'ui.router',
 
     'BlurAdmin.pages.test',
+    'BlurAdmin.pages.plans',
     //'BlurAdmin.pages.dashboard',
     //'BlurAdmin.pages.ui',
     //'BlurAdmin.pages.components',
@@ -16,7 +17,7 @@
     //'BlurAdmin.pages.tables',
     //'BlurAdmin.pages.charts',
     //'BlurAdmin.pages.maps',
-    //'BlurAdmin.pages.profile',
+    'BlurAdmin.pages.profile',
   ])
       .config(routeConfig);
 
@@ -25,39 +26,36 @@
     $urlRouterProvider.otherwise('/dashboard');
 
     baSidebarServiceProvider.addStaticItem({
-      title: 'Pages',
+      title: '临时文件',
       icon: 'ion-document',
       subMenu: [{
-        title: 'Sign In',
+        title: '登录',
         fixedHref: 'auth.html',
         blank: true
       }, {
-        title: 'Sign Up',
+        title: '注册',
         fixedHref: 'reg.html',
         blank: true
-      }, {
-        title: 'User Profile',
-        stateRef: 'profile'
-      }, {
+      },{
         title: '404 Page',
         fixedHref: '404.html',
         blank: true
       }]
     });
-    baSidebarServiceProvider.addStaticItem({
-      title: 'Menu Level 1',
-      icon: 'ion-ios-more',
-      subMenu: [{
-        title: 'Menu Level 1.1',
-        disabled: true
-      }, {
-        title: 'Menu Level 1.2',
-        subMenu: [{
-          title: 'Menu Level 1.2.1',
-          disabled: true
-        }]
-      }]
-    });
+    //baSidebarServiceProvider.addStaticItem({
+    //  title: 'Menu Level 1',
+    //  icon: 'ion-ios-more',
+    //  subMenu: [{
+    //    title: 'Menu Level 1.1',
+    //    disabled: true
+    //  }, {
+    //    title: 'Menu Level 1.2',
+    //    subMenu: [{
+    //      title: 'Menu Level 1.2.1',
+    //      disabled: true
+    //    }]
+    //  }]
+    //});
   }
 
 })();
