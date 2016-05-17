@@ -37,17 +37,28 @@
                 order: 10,
             },
         })
+        .state('plans.forget', {
+            url: '/forget',
+            templateUrl: 'app/pages/plans/plans.list.html',
+            title: '补课管理',
+            sidebarMeta: {
+                order: 40,
+            },
+        })
         .state('plans.edit', {
             url: '/{id}',
             templateUrl: 'app/pages/plans/plans.detail.html',
             title: '编辑课程'
 
-        })
-    ;
+        });
+
 
       $urlRouterProvider.when('/plans','/plans/add');
         //sidebar的service中 过滤了没有 sidebarMeta的state
 
+
+
   }
+
 
 })();

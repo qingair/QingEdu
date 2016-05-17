@@ -29,6 +29,26 @@
     $urlRouterProvider.otherwise('/plans');
 
     baSidebarServiceProvider.addStaticItem({
+      title: '系统',
+      icon: 'ion-ios-more',
+      subMenu: [{
+        title: '多媒体管理',
+        disabled: true
+      },{
+        title: '门店管理',
+        disabled: true
+      }
+        , {
+        title: '用户管理',
+        subMenu: [{
+          title: '权限管理',
+          disabled: true
+        }]
+      }],
+
+    });
+
+    baSidebarServiceProvider.addStaticItem({
       title: '临时文件',
       icon: 'ion-document',
       subMenu: [{
@@ -45,20 +65,7 @@
         blank: true
       }]
     });
-    //baSidebarServiceProvider.addStaticItem({
-    //  title: 'Menu Level 1',
-    //  icon: 'ion-ios-more',
-    //  subMenu: [{
-    //    title: 'Menu Level 1.1',
-    //    disabled: true
-    //  }, {
-    //    title: 'Menu Level 1.2',
-    //    subMenu: [{
-    //      title: 'Menu Level 1.2.1',
-    //      disabled: true
-    //    }]
-    //  }]
-    //});
+
   }
 
 })();

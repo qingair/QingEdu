@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.students', [])
+  angular.module('BlurAdmin.pages.students', ['BlurAdmin.pages.students.amCharts'])
       .config(routeConfig);
 
   /** @ngInject */
