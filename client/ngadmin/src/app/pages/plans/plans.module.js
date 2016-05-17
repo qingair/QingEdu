@@ -16,7 +16,7 @@
           abstract: true,
           title: '课程安排',
             sidebarMeta: {
-                icon: 'ion-university',
+                icon: 'ion-calendar',
                 order: 10,
             },
         })

@@ -8,8 +8,11 @@
   angular.module('BlurAdmin.pages', [
     'ui.router',
 
-    'BlurAdmin.pages.test',
+    //'BlurAdmin.pages.test',
     'BlurAdmin.pages.plans',
+    'BlurAdmin.pages.articles',
+    'BlurAdmin.pages.students',
+    'BlurAdmin.pages.teachers',
     //'BlurAdmin.pages.dashboard',
     //'BlurAdmin.pages.ui',
     //'BlurAdmin.pages.components',
@@ -23,7 +26,7 @@
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/plans');
 
     baSidebarServiceProvider.addStaticItem({
       title: '临时文件',

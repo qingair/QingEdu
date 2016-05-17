@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.plans', [])
+  angular.module('BlurAdmin.pages.articles', [])
       .config(routeConfig);
 
   /** @ngInject */
@@ -17,14 +17,14 @@
           title: '文章管理',
             sidebarMeta: {
                 icon: 'ion-university',
-                order: 10,
+                order: 20,
             },
         })
         .state('articles.list', {
             url: '',
             templateUrl: 'app/pages/articles/articles.list.html',
             title: '文章列表',
-            controller: 'PlansCtrl',
+            controller: 'ArticlesCtrl',
             sidebarMeta: {
                 order: 0,
             },

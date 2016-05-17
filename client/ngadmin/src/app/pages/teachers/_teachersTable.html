@@ -1,0 +1,69 @@
+<div class="vertical-scroll">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th class="table-id">#</th>
+            <th>课程名</th>
+            <th>老师</th>
+            <th>教室</th>
+            <th>开始时间</th>
+            <th>结束时间</th>
+            <th>学生</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in models.data">
+            <td class="table-id">{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>
+                <button ng-repeat="user in item.teachers" type="button" class="btn btn-default btn-xs">{{user.name}}</button>
+            </td>
+            <td>{{item.location}}</td>
+            <td>{{item.startTime}}</td>
+            <td>{{item.endTime}}</td>
+            <td style="width: 200px">
+
+                <button style="margin-right: 4px" ng-repeat="user in item.students" type="button" class="btn btn-default btn-xs">{{user.name}}</button>
+
+
+            </td>
+            <td>
+
+                <button type="button" class="btn btn-default btn-xs">{{item.states}}</button>
+
+                <!--<div class="btn-group" uib-dropdown dropdown-append-to-body>-->
+                    <!--<button type="button" class="btn btn-info btn-xs" uib-dropdown-toggle>-->
+                        <!--待上课 <span class="caret"></span>-->
+                    <!--</button>-->
+                    <!--<ul uib-dropdown-menu>-->
+                        <!--<li><a href>休课</a></li>-->
+                        <!--<li><a href>待上课</a></li>-->
+                        <!--<li><a href>上课中</a></li>-->
+                        <!--<li><a href>完成</a></li>-->
+
+                    <!--</ul>-->
+                <!--</div>-->
+            </td>
+            <td>
+
+                <div class="buttons">
+                <button class="btn btn-primary editable-table-button btn-xs">编辑</button>
+                <button class="btn btn-danger editable-table-button btn-xs">删除</button>
+                 </div>
+
+            </td>
+        </tr>
+        </tbody>
+        <!--<tfoot>-->
+        <!--<tr>-->
+            <!--<td colspan="12" class="text-center">-->
+                <!--<div st-pagination="models.data" st-items-by-page="1" st-displayed-pages="1"></div>-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--</tfoot>-->
+        <!--http://lorenzofox3.github.io/smart-table-website/ pipe-->
+
+    </table>
+</div>
