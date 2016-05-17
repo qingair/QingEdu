@@ -5,16 +5,16 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.plans')
-    .controller('PlansCtrl', PlansCtrl);
+  angular.module('BlurAdmin.pages.articles')
+    .controller('ArticlesCtrl', ArticlesCtrl);
 
   /** @ngInject */
-  function PlansCtrl($scope,$http) {
+  function ArticlesCtrl($scope,$http) {
       $scope.models={}
       $scope.models.data=[
         {
           id:1,
-          name:'plan1',
+          name:'article1',
           teachers:[{id:1,name:'Peter'}],
           students:[
             {id:1,name:'Lucy'},{id:2,name:'HanMeimei'},{id:3,name:'LiLei'},
@@ -29,7 +29,7 @@
         },
         {
           id:2,
-          name:'plan2',
+          name:'article2',
           teachers:[{id:1,name:'Ben'}],
           students:[
             {id:1,name:'Lucy'},{id:2,name:'HanMeimei'},{id:3,name:'LiLei'},

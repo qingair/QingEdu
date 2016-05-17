@@ -11,41 +11,41 @@
   /** @ngInject */
   function routeConfig($stateProvider,$urlRouterProvider) {
     $stateProvider
-        .state('plans', {
-          url: '/plans',template : '<ui-view></ui-view>',
+        .state('articles', {
+          url: '/articles',template : '<ui-view></ui-view>',
           abstract: true,
-          title: '课程安排',
+          title: '文章管理',
             sidebarMeta: {
                 icon: 'ion-university',
                 order: 10,
             },
         })
-        .state('plans.list', {
+        .state('articles.list', {
             url: '',
-            templateUrl: 'app/pages/plans/plans.list.html',
-            title: '课程列表',
+            templateUrl: 'app/pages/articles/articles.list.html',
+            title: '文章列表',
             controller: 'PlansCtrl',
             sidebarMeta: {
                 order: 0,
             },
         })
-        .state('plans.add', {
+        .state('articles.add', {
             url: '/add',
-            templateUrl: 'app/pages/plans/plans.detail.html',
-            title: '添加课程',
+            templateUrl: 'app/pages/articles/articles.detail.html',
+            title: '添加文章',
             sidebarMeta: {
                 order: 10,
             },
         })
-        .state('plans.edit', {
+        .state('articles.edit', {
             url: '/{id}',
-            templateUrl: 'app/pages/plans/plans.detail.html',
-            title: '编辑课程'
+            templateUrl: 'app/pages/articles/articles.detail.html',
+            title: '编辑文章'
 
         })
     ;
 
-      $urlRouterProvider.when('/plans','/plans/add');
+      $urlRouterProvider.when('/articles','/articles/add');
         //sidebar的service中 过滤了没有 sidebarMeta的state
 
   }
