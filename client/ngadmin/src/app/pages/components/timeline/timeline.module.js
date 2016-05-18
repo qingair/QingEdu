@@ -11,10 +11,10 @@
   /** @ngInject */
   function routeConfig($stateProvider) {
     $stateProvider
-      .state('components.timeline', {
+      .state('timeline', {
         url: '/timeline',
         templateUrl: 'app/pages/components/timeline/timeline.html',
-          title: 'Timeline',
+          title: '关于我们',
           sidebarMeta: {
             icon: 'ion-ios-pulse',
             order: 100,
