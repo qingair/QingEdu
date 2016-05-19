@@ -24,7 +24,8 @@
           states:'待上课',
           startTime:'2015-02-13 16:30',
           endTime:'2015-02-13 16:40',
-          location:'room1'
+          location:'room1',
+          tags:[]
 
         },
         {

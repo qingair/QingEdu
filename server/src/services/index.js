@@ -1,4 +1,9 @@
 'use strict';
+const plan = require('./plan');
+const plan = require('./plan');
+const plan = require('./plan');
+const plan = require('./plan');
+const plan = require('./plan');
 const lesson = require('./lesson');
 const tag = require('./tag');
 const article = require('./article');
@@ -30,4 +35,9 @@ module.exports = function() {
     .forEach(model => model.associate());
 
   sequelize.sync();
+  app.configure(plan);
+  app.configure(plan);
+  app.configure(plan);
+  app.configure(plan);
+  app.configure(plan);
 };
